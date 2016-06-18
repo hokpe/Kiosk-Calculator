@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationNameHeader.Text" xml:space="preserve">
+    <value>Kioski Laskin</value>
+  </data>
+  <data name="articleName.Text" xml:space="preserve">
+    <value>Artikkelin nimi</value>
+  </data>
+  <data name="articleNameEditHeader" xml:space="preserve">
+    <value>Artikkelin nimi</value>
+  </data>
+  <data name="articlePriceEditHeader" xml:space="preserve">
+    <value>Artikkelin hinta</value>
+  </data>
+  <data name="articlesHeader.Text" xml:space="preserve">
+    <value>Artikkelit</value>
+  </data>
+  <data name="CancelButton.Content" xml:space="preserve">
+    <value>Hylkää</value>
+  </data>
+  <data name="CatalogueHasArticleXMsg" xml:space="preserve">
+    <value>Hinnastossa on jo %s niminen artikkeli</value>
+  </data>
+  <data name="catalogueName.Text" xml:space="preserve">
+    <value>Hinnaston nimi</value>
+  </data>
+  <data name="cataloguesHeader.Text" xml:space="preserve">
+    <value>Hinnastot</value>
+  </data>
+  <data name="ConfirmationMsgHeader" xml:space="preserve">
+    <value>Vahvistus</value>
+  </data>
+  <data name="ContinueDayButton.Text" xml:space="preserve">
+    <value>Jatka vanhaa tapahtumaa</value>
+  </data>
+  <data name="DefaultArticleName" xml:space="preserve">
+    <value>Artikkeli</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="DeleteXQuestionMsg" xml:space="preserve">
+    <value>Haluatko poistaa %s ?</value>
+  </data>
+  <data name="EventNameQueryHeader.Text" xml:space="preserve">
+    <value>Tapahtuman nimi</value>
+  </data>
+  <data name="EventNameQueryInfo.Text" xml:space="preserve">
+    <value>Anna tapahtumalle sellainen nimi, joka kuvaa tapahtumaa mahdollisimman yksityiskohtaisesti.</value>
+  </data>
+  <data name="EventsHeader.Text" xml:space="preserve">
+    <value>Tapahtumat</value>
+  </data>
+  <data name="EventX" xml:space="preserve">
+    <value>Tapahtuma
+%s</value>
+  </data>
+  <data name="EventXStoppedInListMsg" xml:space="preserve">
+    <value>Tapahtuma %s on keskeytetty. Valitse tapahtuma uudestaan tai vaihda tapahtumaa.</value>
+  </data>
+  <data name="EventXStoppedMsg" xml:space="preserve">
+    <value>Tapahtuma %s on keskeytetty. Voit jatkaa tapahtumaa pääsivun kautta.</value>
+  </data>
+  <data name="languageSettingsTitle.Text" xml:space="preserve">
+    <value>Language / Kieli / språk / Sprache / Langue</value>
+  </data>
+  <data name="LaskinHeader.Text" xml:space="preserve">
+    <value>Laskin</value>
+  </data>
+  <data name="MoneyBack.Text" xml:space="preserve">
+    <value>Takaisin:</value>
+  </data>
+  <data name="MoneyGot.Text" xml:space="preserve">
+    <value>Saatu:</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="NoCataloguesMsg" xml:space="preserve">
+    <value>Ei vanhoja hinnastoja, luo ensin ensimmäinen.</value>
+  </data>
+  <data name="pcs" xml:space="preserve">
+    <value>kpl</value>
+  </data>
+  <data name="PriceCanBeOnlyPositiveNumberMsg" xml:space="preserve">
+    <value>Hinta voi olla vain positiivinen numero.</value>
+  </data>
+  <data name="ReadyButton.Content" xml:space="preserve">
+    <value>Valmis</value>
+  </data>
+  <data name="SelectButton.Content" xml:space="preserve">
+    <value>Valitse</value>
+  </data>
+  <data name="SettingsHeader.Text" xml:space="preserve">
+    <value>Asetukset</value>
+  </data>
+  <data name="settingsRemoveAllButton.Text" xml:space="preserve">
+    <value>Poista kaikki tiedot</value>
+  </data>
+  <data name="settingsRemoveAllEventsButton.Text" xml:space="preserve">
+    <value>Poista kaikki tapahtumat</value>
+  </data>
+  <data name="settingsRemoveEventsButton.Text" xml:space="preserve">
+    <value>Poista tapahtumia</value>
+  </data>
+  <data name="ShowStatisticsButton.Text" xml:space="preserve">
+    <value>Valitun tapahtuman tilasto</value>
+  </data>
+  <data name="StartNewDayButton.Text" xml:space="preserve">
+    <value>Aloita uusi tapahtuma</value>
+  </data>
+  <data name="StatisticsHeader.Text" xml:space="preserve">
+    <value>Tilasto</value>
+  </data>
+  <data name="TotalSum.Text" xml:space="preserve">
+    <value>Yhteensä:</value>
+  </data>
+  <data name="XHasDeletedMsg" xml:space="preserve">
+    <value>%s on nyt poistettu.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Kyllä</value>
+  </data>
+  <data name="CurrencySettingsTitle.Text" xml:space="preserve">
+    <value>Valuutta</value>
+  </data>
+  <data name="AllEventsRemovedMsg" xml:space="preserve">
+    <value>Kaikki tapahtumat on poistettu !</value>
+  </data>
+  <data name="AllRemovedMsg" xml:space="preserve">
+    <value>Kaikki kioski laskimen käyttäjätiedot on poistettu !</value>
+  </data>
+  <data name="RemoveAllEventsMsg" xml:space="preserve">
+    <value>Haluatko todella poistaa kaikki tapahtumat ? Hinnastoja ei poisteta.</value>
+  </data>
+  <data name="RemoveAllMsg" xml:space="preserve">
+    <value>Haluatko todella poistaa kaikki tapahtumat ja hinnastot ?</value>
+  </data>
+</root>

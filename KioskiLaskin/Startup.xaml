@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="KioskiLaskin.Startup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KioskiLaskin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="360*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0" Grid.Column="0">
+            <TextBlock x:Name="textBlock" x:Uid="ApplicationNameHeader" TextWrapping="Wrap" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+        </Viewbox>
+        <Image x:Name="mediaElement" HorizontalAlignment="Stretch"  Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Stretch" Source="Assets/StartPicture.png"/>
+        <Viewbox Grid.Row="3" Grid.Column="0">
+            <TextBlock x:Name="CopyrightBlock" TextWrapping="Wrap" Text="Petri Hokkanen" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" Foreground="#FFFBF7F7" />
+        </Viewbox>
+        <ProgressBar x:Name="WaitBar" Height="20" Margin="20,0,20,0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderBrush="#FFFDF9F9" BorderThickness="2" Foreground="#FFEEF5FB" Maximum="20"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF1EE8CC"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</Page>
