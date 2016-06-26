@@ -9,9 +9,11 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="250*"/>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
@@ -20,16 +22,16 @@
             <RowDefinition Height="260*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="listHinnasto" SelectionChanged="HinnastoValittu" Grid.Row="1" Grid.Column="0" Tapped="HinnastoTapped" >
+        <ListBox x:Name="listHinnasto" SelectionChanged="HinnastoValittu" Grid.Row="1" Grid.Column="1" Tapped="HinnastoTapped" >
             <ListBoxItem Content=""/>
         </ListBox>
-        <Viewbox Grid.Row="0" Grid.Column="0">
+        <Viewbox Grid.Row="0" Grid.Column="1">
             <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="cataloguesHeader" Text="Hinnasto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="MV Boli" />
         </Viewbox>
-        <Viewbox Grid.Row="2" Grid.Column="0">
+        <Viewbox Grid.Row="2" Grid.Column="1">
             <TextBlock x:Name="textBlock_Copy" TextWrapping="Wrap" x:Uid="articlesHeader" Text="Artikkelit" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="MV Boli" />
         </Viewbox>
-        <ListBox x:Name="listArtikkelit" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" SelectionChanged="ArtikkeliValittu">
+        <ListBox x:Name="listArtikkelit" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" SelectionChanged="ArtikkeliValittu">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -57,15 +59,15 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <StackPanel x:Name="HinnastoQuery" Grid.Column="0" Grid.Row="1" Background="white" Margin="0,60">
+        <StackPanel x:Name="HinnastoQuery" Grid.Column="1" Grid.Row="1" Background="white" Margin="0,60">
             <TextBlock x:Name="EditBoxHeader" Opacity="100" TextWrapping="Wrap" x:Uid="catalogueName" Text="Hinnaston nimi" TextAlignment="Center"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli"/>
             <TextBox x:Name="EditBox" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="kokeilu" VerticalAlignment="Stretch" LostFocus="HinnastoFocusLost" KeyDown="HinnastoOnKeyDownHandler"/>
         </StackPanel>
-        <StackPanel x:Name="ArtikkeliQuery" Grid.Column="0" Grid.Row="3" Background="white" Margin="0,60">
+        <StackPanel x:Name="ArtikkeliQuery" Grid.Column="1" Grid.Row="3" Background="white" Margin="0,60">
             <TextBlock x:Name="EditBox2Header" Opacity="100" TextWrapping="Wrap" x:Uid="articleName" Text="Artikkelin nimi" TextAlignment="Center"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli"/>
             <TextBox x:Name="EditBox2" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="kokeilu" VerticalAlignment="Stretch" LostFocus="ArtikkeliFocusLost" KeyDown="ArtikkeliOnKeyDownHandler" TextChanged="ArtikkeliTextChanged" />
         </StackPanel>
-        <Grid Grid.Column="2" Grid.Row="1">
+        <Grid Grid.Column="3" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100*"/>
                 <RowDefinition Height="10"/>
@@ -85,7 +87,7 @@
                 </StackPanel>
             </Button>
         </Grid>
-        <Grid Grid.Column="2" Grid.Row="3">
+        <Grid Grid.Column="3" Grid.Row="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100*"/>
                 <RowDefinition Height="10"/>

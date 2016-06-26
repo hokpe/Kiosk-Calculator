@@ -25,19 +25,13 @@
         </Viewbox>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="170*"/>
+                <ColumnDefinition Width="200*"/>
                 <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="60*"/>
             </Grid.ColumnDefinitions>
-            <Viewbox Grid.Column="0">
-                <TextBlock x:Name="Tuotenimi" Text="Kahvi" HorizontalAlignment="Left" Margin="2,0,2,0"/>
-            </Viewbox>
-            <Viewbox Grid.Column="1">
-                <TextBlock x:Name="Tuotemaara" Text="2 kpl" HorizontalAlignment="Center" Margin="2,0,2,0"/>
-            </Viewbox>
-            <Viewbox Grid.Column="2">
-                <TextBlock x:Name="Yhteishinta" Text="3 €" HorizontalAlignment="Right" Margin="2,0,2,0"/>
-            </Viewbox>
+            <TextBlock x:Name="Tuotenimi" Grid.Column="0" Text="Kahvi" HorizontalAlignment="Left" TextTrimming="CharacterEllipsis" FontSize="30" Margin="5,0,5,0"/>
+            <TextBlock x:Name="Tuotemaara" Grid.Column="1" Text="2 kpl" HorizontalAlignment="Center" FontSize="30" Margin="5,0,5,0"/>
+            <TextBlock x:Name="Yhteishinta" Grid.Column="2" Text="3 €" HorizontalAlignment="Right" FontSize="30" Margin="5,0,5,0"/>
         </Grid>
         <Grid Grid.Row="2" BorderThickness="5" BorderBrush="Black" Background="Azure">
             <Grid.ColumnDefinitions>
@@ -96,7 +90,7 @@
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
             <Viewbox Grid.Column="0">
-                <TextBlock x:Name="TapahtumaNimi" TextWrapping="Wrap" Text="Koe" HorizontalAlignment="Stretch" Foreground="Beige" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+                <TextBlock x:Name="TapahtumaNimi" TextWrapping="Wrap" Text="Koe" HorizontalAlignment="Stretch" Foreground="Beige" VerticalAlignment="Stretch" FontFamily="MV Boli" Margin="5,2,5,0" />
             </Viewbox>
             <Viewbox Grid.Column="1">
                 <Button x:Name="ValmisButton" x:Uid="ReadyButton" Content="Valmis" HorizontalAlignment="Stretch" Background="Aquamarine" VerticalAlignment="Stretch" FontFamily="MV Boli" Click="ValmisClick"/>
