@@ -37,9 +37,9 @@
                 <RowDefinition Height="33*"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" x:Uid="languageSettingsTitle" Text="Kieli / Language" TextTrimming="CharacterEllipsis" FontSize="25"/>
-            <ComboBox Grid.Row="0" x:Name="KieliBox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="25" SelectionChanged="LanguageChanged"/>
+            <ComboBox Grid.Row="0" x:Name="KieliBox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" SelectionChanged="LanguageChanged"/>
             <TextBlock Grid.Row="1" x:Uid="CurrencySettingsTitle" Text="Valuutta" FontSize="25"/>
-            <ComboBox Grid.Row="1" x:Name="ValuuttaBox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="25" SelectionChanged="CurrencyChanged"/>
+            <ComboBox Grid.Row="1" x:Name="ValuuttaBox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" SelectionChanged="CurrencyChanged"/>
             <TextBlock Grid.Row="2" x:Name="AboutBlock" PointerEntered="AboutPointerEntered" PointerExited="AboutPointerExited" Foreground="Blue" Tapped="AboutTapped">
                 <Underline>
                     <Run x:Uid="AboutSettingsTitle" Text="Tietoja" FontSize="25"/>
