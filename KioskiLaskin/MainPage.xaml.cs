@@ -35,34 +35,8 @@ namespace KioskiLaskin
 
         private void UusiPaivaPress(object sender, RoutedEventArgs e)
         {
-            /*string s = "uusi";
-            int? secondViewId = null;
-
-            if (ProjectionManager.ProjectionDisplayAvailable)
-            {
-                int thisViewId;
-                thisViewId = ApplicationView.GetForCurrentView().Id;
-
-                var thisDispatcher = Window.Current.Dispatcher;
-                await CoreApplication.CreateNewView().Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-                {
-                    secondViewId = ApplicationView.GetForCurrentView().Id;
-                    // Display the page in the view. Not visible until “StartProjectionAsync” called
-                    var rootFrame = new Frame();
-                    rootFrame.Navigate(typeof(HinnastoJaArtikkelit), s);
-                    Window.Current.Content = rootFrame;
-                    Window.Current.Activate();
-                });
-                // Show the view on a second display
-                if (secondViewId.HasValue)
-                {
-                    await ProjectionManager.StartProjectingAsync(secondViewId.Value, thisViewId);
-                }
-            }
-
             // Read more at https://blogs.windows.com/buildingapps/2015/12/07/optimizing-apps-for-continuum-for-phone/#SZEzLFPFjA9SGHkk.99 */
             this.Frame.Navigate(typeof(HinnastoJaArtikkelit));
-            //BackStackClass.Navigate(this.Frame, typeof(HinnastoJaArtikkelit), typeof(HinnastoJaArtikkelit));
         }
 
         private void JatkaVanhaaPaivaa(object sender, RoutedEventArgs e)
@@ -74,6 +48,12 @@ namespace KioskiLaskin
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            Frame rootFrame = Window.Current.Content as Frame;
+            while(rootFrame.BackStackDepth != 0)
+            {
+                /* MainPage is the initial page, if BackStack contains some pages, those needs to be removed. Like Startup Page. */
+                this.Frame.BackStack.Remove(this.Frame.BackStack.Last());
+            }
             BackStackClass.Navigate(typeof(StartupProjected));
         }
         void App_Exit(object sender, ExitEventArgs e)
