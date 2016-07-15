@@ -179,7 +179,7 @@
     <value>Tapahtuma %s on keskeytetty. Voit jatkaa tapahtumaa pääsivun kautta.</value>
   </data>
   <data name="languageSettingsTitle.Text" xml:space="preserve">
-    <value>Language / Kieli / språk / Sprache / Langue</value>
+    <value>Language / Kieli</value>
   </data>
   <data name="LaskinHeader.Text" xml:space="preserve">
     <value>Laskin</value>
@@ -221,7 +221,7 @@
     <value>Poista tapahtumia</value>
   </data>
   <data name="ShowStatisticsButton.Text" xml:space="preserve">
-    <value>Valitun tapahtuman tilasto</value>
+    <value>Tapahtuman tilasto</value>
   </data>
   <data name="StartNewDayButton.Text" xml:space="preserve">
     <value>Aloita uusi tapahtuma</value>
@@ -252,5 +252,20 @@
   </data>
   <data name="RemoveAllMsg" xml:space="preserve">
     <value>Haluatko todella poistaa kaikki tapahtumat ja hinnastot ?</value>
+  </data>
+  <data name="About1" xml:space="preserve">
+    <value>Sovellus on tehty harjoitustyönä universal windows applikaatioihin.</value>
+  </data>
+  <data name="About2" xml:space="preserve">
+    <value>Jos sinulla on parannusehdotuksia tai löydät virheitä, voit ottaa yhteyttä sähköpostitse.</value>
+  </data>
+  <data name="AboutSettingsTitle.Text" xml:space="preserve">
+    <value>Tietoja</value>
+  </data>
+  <data name="RightsReserved" xml:space="preserve">
+    <value>Kaikki oikeudet pidätetään.</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versio</value>
   </data>
 </root>

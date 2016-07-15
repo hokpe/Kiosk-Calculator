@@ -19,7 +19,7 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0" Grid.Column="0">
-            <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="LaskinHeader" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="LaskinHeader" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FFD43535" FontFamily="MV Boli" />
         </Viewbox>
         <StackPanel x:Name="TapahtumaQuery" Grid.Column="0" Opacity="0.1" Grid.Row="1" Background="white" Margin="0,100" BorderBrush="Black" BorderThickness="5">
             <TextBlock x:Name="EditBoxHeader" Opacity="100" x:Uid="EventNameQueryHeader" TextWrapping="Wrap" Text="Tapahtuman nimi" TextAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli"/>
@@ -28,10 +28,13 @@
         </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="80*"/>
-                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="listArtikkelit" Grid.Column="0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" ItemsSource="{Binding ItemsCollection}">
+            <ListBox x:Name="listArtikkelit" Grid.Column="1" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" ItemsSource="{Binding ItemsCollection}">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -55,7 +58,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="3">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100*"/>
                     <RowDefinition Height="20"/>
@@ -100,7 +103,7 @@
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
             <Viewbox Grid.Column="0">
-                <TextBlock x:Name="TapahtumaNimi" TextWrapping="Wrap" Text=" " HorizontalAlignment="Stretch" Foreground="Beige" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+                <TextBlock x:Name="TapahtumaNimi" TextWrapping="Wrap" Text=" " HorizontalAlignment="Stretch" Foreground="Beige" VerticalAlignment="Stretch" FontFamily="MV Boli" Margin="5,2,5,0" />
             </Viewbox>
             <Viewbox Grid.Column="1">
                 <Button x:Name="ValmisButton" x:Uid="ReadyButton" Content="Valmis" HorizontalAlignment="Stretch" Background="Aquamarine" VerticalAlignment="Stretch" FontFamily="MV Boli" Click="ValmisClick"/>

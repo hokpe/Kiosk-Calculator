@@ -30,18 +30,15 @@ namespace KioskiLaskin
         {
             ApplicationLanguages.PrimaryLanguageOverride = Settings.getlanguage();
             this.InitializeComponent();
-            //UIViewSettings.GetForCurrentView().UserInteractionMode;
         }
 
         private void UusiPaivaPress(object sender, RoutedEventArgs e)
         {
-            // Read more at https://blogs.windows.com/buildingapps/2015/12/07/optimizing-apps-for-continuum-for-phone/#SZEzLFPFjA9SGHkk.99 */
             this.Frame.Navigate(typeof(HinnastoJaArtikkelit));
         }
 
         private void JatkaVanhaaPaivaa(object sender, RoutedEventArgs e)
         {
-            //BackStackClass.Navigate(this.Frame, typeof(TapahtumaLista), typeof(TapahtumaLista), TapahtumaLista.UseCaseType.jatkaPaivaa);
             this.Frame.Navigate(typeof(TapahtumaLista), TapahtumaLista.UseCaseType.jatkaPaivaa);
         }
 
@@ -63,7 +60,6 @@ namespace KioskiLaskin
 
         private void TilastoClick(object sender, RoutedEventArgs e)
         {
-            //BackStackClass.Navigate(this.Frame, typeof(TapahtumaLista), typeof(TapahtumaLista), TapahtumaLista.UseCaseType.Tilasto);
             this.Frame.Navigate(typeof(TapahtumaLista), TapahtumaLista.UseCaseType.tilasto);
         }
 

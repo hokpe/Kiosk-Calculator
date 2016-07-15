@@ -9,7 +9,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
@@ -17,10 +19,10 @@
             <RowDefinition Height="60*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-        <Viewbox Grid.Row="0" Grid.Column="0">
-            <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="LaskinHeader" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+        <Viewbox Grid.Row="0" Grid.Column="1">
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="LaskinHeader" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FFD43535" FontFamily="MV Boli" />
         </Viewbox>
-        <ListBox x:Name="listArtikkelit" Grid.Row="1" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" ItemsSource="{Binding ItemsCollection}">
+        <ListBox x:Name="listArtikkelit" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" ItemsSource="{Binding ItemsCollection}">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -44,7 +46,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Grid Grid.Row="2" x:Name ="yhteensaBorder" BorderThickness="5" BorderBrush="Black" Background="Azure">
+        <Grid Grid.Row="2" Grid.Column="1" x:Name ="yhteensaBorder" BorderThickness="5" BorderBrush="Black" Background="Azure">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="170*"/>
                 <ColumnDefinition Width="100*"/>

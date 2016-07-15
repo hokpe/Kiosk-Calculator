@@ -179,7 +179,7 @@
     <value>Event %s is Interrupted. You can continue event from main page option.</value>
   </data>
   <data name="languageSettingsTitle.Text" xml:space="preserve">
-    <value>Kieli / Language / språk / Sprache / Langue</value>
+    <value>Kieli / Language</value>
   </data>
   <data name="LaskinHeader.Text" xml:space="preserve">
     <value>Calculator</value>
@@ -221,7 +221,7 @@
     <value>Delete events</value>
   </data>
   <data name="ShowStatisticsButton.Text" xml:space="preserve">
-    <value>Show the statistics of the event</value>
+    <value>Statistics of the event</value>
   </data>
   <data name="StartNewDayButton.Text" xml:space="preserve">
     <value>Start new event</value>
@@ -252,5 +252,20 @@
   </data>
   <data name="RemoveAllMsg" xml:space="preserve">
     <value>Do you really like to delete all user data ?</value>
+  </data>
+  <data name="About1" xml:space="preserve">
+    <value>Application is made as a study project for universal windows applications.</value>
+  </data>
+  <data name="About2" xml:space="preserve">
+    <value>If you have change proposals or improvement ideas, don't hesitate to contact.</value>
+  </data>
+  <data name="AboutSettingsTitle.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="RightsReserved" xml:space="preserve">
+    <value>All rights reserved.</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
   </data>
 </root>

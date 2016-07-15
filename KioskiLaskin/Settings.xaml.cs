@@ -4,9 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Windows.ApplicationModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Globalization;
+using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -230,6 +232,34 @@ namespace KioskiLaskin
                     await Task.Delay(TimeSpan.FromSeconds(1));
                 }
             } while (i > 10);
+        }
+
+        private void AboutPointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            AboutBlock.Foreground = new SolidColorBrush(Colors.Blue);
+        }
+
+        private void AboutPointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            AboutBlock.Foreground = new SolidColorBrush(Colors.Red);
+        }
+
+        private void AboutTapped(object sender, TappedRoutedEventArgs e)
+        {
+            string s = "Pop-up Kiosk Calculator\n\n" + Localization.GetLocalizedText("Version") + " " + GetAppVersion() + ":\n";
+            s += "\u00A9 2016 Hokpe Software. " + Localization.GetLocalizedText("RightsReserved") + "\n";
+            s += Localization.GetLocalizedText("About2") + "\n\nhokpesoftware@outlook.com.\n";
+            Task task = new MessageDialog(s).ShowAsync().AsTask();
+        }
+
+        private string GetAppVersion()
+        {
+            /* Function copied from: http://stackoverflow.com/questions/28635208/retrieve-the-current-app-version-from-package */
+            Package package = Package.Current;
+            PackageId packageId = package.Id;
+            PackageVersion version = packageId.Version;
+
+            return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build, version.Revision);
         }
     }
 }
