@@ -19,7 +19,7 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0" Grid.Column="0">
-            <TextBlock x:Name="textBlock" x:Uid="StatisticsHeader" TextWrapping="Wrap" Text="Tilasto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+            <TextBlock x:Name="textBlock" x:Uid="StatisticsHeader" TextWrapping="Wrap" Text="Tilasto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FFD43535" FontFamily="MV Boli" />
         </Viewbox>
         <Viewbox Grid.Row="1" Grid.Column="0">
             <TextBlock x:Name="TapahtumanNimi" TextWrapping="Wrap" Text="Tapahtuma" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />

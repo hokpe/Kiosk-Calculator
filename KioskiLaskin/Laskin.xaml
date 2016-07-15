@@ -19,7 +19,7 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0" Grid.Column="0">
-            <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="LaskinHeader" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="LaskinHeader" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FFD43535" FontFamily="MV Boli" />
         </Viewbox>
         <StackPanel x:Name="TapahtumaQuery" Grid.Column="0" Opacity="0.1" Grid.Row="1" Background="white" Margin="0,100" BorderBrush="Black" BorderThickness="5">
             <TextBlock x:Name="EditBoxHeader" Opacity="100" x:Uid="EventNameQueryHeader" TextWrapping="Wrap" Text="Tapahtuman nimi" TextAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli"/>

@@ -30,24 +30,30 @@
         <Viewbox Grid.Row="0" Grid.Column="1" >
             <TextBlock x:Name="textBlock1" TextWrapping="Wrap" x:Uid="SettingsHeader" Text="Asetukset" VerticalAlignment="Top" Foreground="#FFD43535" HorizontalAlignment="Center" FontSize="48" Margin="-50,10,-50,10" FontFamily="MV Boli"/>
         </Viewbox>
-        <Grid Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" VerticalAlignment="Center">
+        <Grid Grid.Column="1" Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50*"/>
-                <RowDefinition Height="50*"/>
+                <RowDefinition Height="33*"/>
+                <RowDefinition Height="33*"/>
+                <RowDefinition Height="33*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" x:Uid="languageSettingsTitle" Text="Kieli / Language / språk / Sprache / Langue" TextTrimming="CharacterEllipsis" FontSize="30"/>
-            <ComboBox Grid.Row="0" x:Name="KieliBox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" SelectionChanged="LanguageChanged"/>
-            <TextBlock Grid.Row="1" x:Uid="CurrencySettingsTitle" Text="Valuutta" FontSize="30"/>
-            <ComboBox Grid.Row="1" x:Name="ValuuttaBox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" SelectionChanged="CurrencyChanged"/>
+            <TextBlock Grid.Row="0" x:Uid="languageSettingsTitle" Text="Kieli / Language" TextTrimming="CharacterEllipsis" FontSize="25"/>
+            <ComboBox Grid.Row="0" x:Name="KieliBox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="25" SelectionChanged="LanguageChanged"/>
+            <TextBlock Grid.Row="1" x:Uid="CurrencySettingsTitle" Text="Valuutta" FontSize="25"/>
+            <ComboBox Grid.Row="1" x:Name="ValuuttaBox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="25" SelectionChanged="CurrencyChanged"/>
+            <TextBlock Grid.Row="2" x:Name="AboutBlock" PointerEntered="AboutPointerEntered" PointerExited="AboutPointerExited" Foreground="Blue" Tapped="AboutTapped">
+                <Underline>
+                    <Run x:Uid="AboutSettingsTitle" Text="Tietoja" FontSize="25"/>
+                </Underline>
+            </TextBlock>
         </Grid>
         <Button x:Name="button" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Background="Aquamarine" VerticalAlignment="Stretch" FontFamily="MV Boli" Margin="0,10,0,10" Click="PoistaTapahtumiaClick" >
-            <TextBlock x:Uid="settingsRemoveEventsButton" Text="Poista tapahtumia" TextWrapping="WrapWholeWords" FontSize="30" />
+            <TextBlock x:Uid="settingsRemoveEventsButton" Text="Poista tapahtumia" TextWrapping="WrapWholeWords" Margin="-10, 0,-10,-10" LineStackingStrategy="BlockLineHeight" LineHeight="30" FontSize="30" />
         </Button>
         <Button x:Name="button_Copy" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Background="#FFFF8B7F" VerticalAlignment="Stretch" FontFamily="MV Boli" Margin="0,10,0,10" Click="PoistaTapahtumatClick" >
-            <TextBlock x:Uid="settingsRemoveAllEventsButton" Text="Poista kaikki tapahtumat" TextWrapping="WrapWholeWords" FontSize="30" />
+            <TextBlock x:Uid="settingsRemoveAllEventsButton" Text="Poista kaikki tapahtumat" TextWrapping="WrapWholeWords" Margin="-10, 0,-10,-10" LineStackingStrategy="BlockLineHeight" LineHeight="30" FontSize="30" />
         </Button>
         <Button x:Name="button_Copy1" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Background="Red" VerticalAlignment="Stretch" FontFamily="MV Boli" Margin="0,10,0,10" Click="PoistaKaikkiClick">
-            <TextBlock x:Uid="settingsRemoveAllButton" Text="Poista kaikki" TextWrapping="WrapWholeWords" FontSize="30" />
+            <TextBlock x:Uid="settingsRemoveAllButton" Text="Poista kaikki" TextWrapping="WrapWholeWords" Margin="-10, 0,-10,-10" LineStackingStrategy="BlockLineHeight" LineHeight="30" FontSize="30" />
         </Button>
     </Grid>
 </Page>

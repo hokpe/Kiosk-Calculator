@@ -21,18 +21,21 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0" Grid.Column="0">
-            <TextBlock x:Name="textBlock" x:Uid="LaskinHeader" TextWrapping="Wrap" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+            <TextBlock x:Name="textBlock" x:Uid="LaskinHeader" TextWrapping="Wrap" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FFD43535" FontFamily="MV Boli" />
         </Viewbox>
-        <Grid Grid.Row="1">
+        <ScrollViewer Grid.Row="1" x:Name="sv" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="170*"/>
                 <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="90*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="Tuotenimi" Grid.Column="0" Text="Kahvi" HorizontalAlignment="Left" TextTrimming="CharacterEllipsis" FontSize="30" Margin="5,0,5,0"/>
-            <TextBlock x:Name="Tuotemaara" Grid.Column="1" Text="2 kpl" HorizontalAlignment="Center" FontSize="30" Margin="5,0,5,0"/>
-            <TextBlock x:Name="Yhteishinta" Grid.Column="2" Text="3 €" HorizontalAlignment="Right" FontSize="30" Margin="5,0,5,0"/>
-        </Grid>
+                <TextBlock x:Name="Tuotenimi" Grid.Column="0" Text="Kahvi" HorizontalAlignment="Left" TextTrimming="CharacterEllipsis" FontSize="30" Margin="5,0,5,0"/>
+            
+            <TextBlock x:Name="Tuotemaara" Grid.Column="1" Text="44 kpl" HorizontalAlignment="Center" FontSize="30" Margin="5,0,5,0"/>
+            <TextBlock x:Name="Yhteishinta" Grid.Column="2" Text="22.5 €" HorizontalAlignment="Right" FontSize="30" Margin="5,0,5,0"/>
+            </Grid>
+        </ScrollViewer>
         <Grid Grid.Row="2" BorderThickness="5" BorderBrush="Black" Background="Azure">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="170*"/>

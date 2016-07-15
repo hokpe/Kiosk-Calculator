@@ -26,7 +26,7 @@
             <ListBoxItem Content=""/>
         </ListBox>
         <Viewbox Grid.Row="0" Grid.Column="1">
-            <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="cataloguesHeader" Text="Hinnasto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="MV Boli" />
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" x:Uid="cataloguesHeader" Text="Hinnastot" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="MV Boli" />
         </Viewbox>
         <Viewbox Grid.Row="2" Grid.Column="1">
             <TextBlock x:Name="textBlock_Copy" TextWrapping="Wrap" x:Uid="articlesHeader" Text="Artikkelit" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="MV Boli" />

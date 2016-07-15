@@ -17,11 +17,11 @@
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0" Grid.Column="0">
-            <TextBlock x:Name="textBlock" x:Uid="ApplicationNameHeader" TextWrapping="Wrap" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+            <TextBlock x:Name="textBlock" x:Uid="ApplicationNameHeader" TextWrapping="Wrap" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FFD43535" FontFamily="MV Boli" />
         </Viewbox>
         <Image x:Name="mediaElement" HorizontalAlignment="Stretch"  Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Stretch" Source="Assets/StartPicture.png"/>
         <Viewbox Grid.Row="3" Grid.Column="0">
-            <TextBlock x:Name="CopyrightBlock" TextWrapping="Wrap" Text="Petri Hokkanen" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" Foreground="#FFFBF7F7" />
+            <TextBlock x:Name="CopyrightBlock" TextWrapping="Wrap" Text="hokpesoftware@outlook.com" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" Foreground="#FFFBF7F7" />
         </Viewbox>
         <ProgressBar x:Name="WaitBar" Height="20" Margin="20,0,20,0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderBrush="#FFFDF9F9" BorderThickness="2" Foreground="#FFEEF5FB" Maximum="20"/>
         <Grid.Background>

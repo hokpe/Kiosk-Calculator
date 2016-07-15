@@ -9,7 +9,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
@@ -19,26 +21,20 @@
             <RowDefinition Height="60*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-        <Viewbox Grid.Row="0" Grid.Column="0">
-            <TextBlock x:Name="textBlock" x:Uid="LaskinHeader" TextWrapping="Wrap" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" />
+        <Viewbox Grid.Row="0" Grid.Column="1">
+            <TextBlock x:Name="textBlock" x:Uid="LaskinHeader" TextWrapping="Wrap" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FFD43535" FontFamily="MV Boli" />
         </Viewbox>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="170*"/>
-                <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="180*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="60*"/>
             </Grid.ColumnDefinitions>
-            <Viewbox Grid.Column="0">
-                <TextBlock x:Name="Tuotenimi" Text="Kahvi" HorizontalAlignment="Left" Margin="2,0,2,0"/>
-            </Viewbox>
-            <Viewbox Grid.Column="1">
-                <TextBlock x:Name="Tuotemaara" Text="2 kpl" HorizontalAlignment="Center" Margin="2,0,2,0"/>
-            </Viewbox>
-            <Viewbox Grid.Column="2">
-                <TextBlock x:Name="Yhteishinta" Text="3 €" HorizontalAlignment="Right" Margin="2,0,2,0"/>
-            </Viewbox>
+            <TextBlock x:Name="Tuotenimi" Grid.Column="0" Text="Kahvi" HorizontalAlignment="Left" TextTrimming="CharacterEllipsis" FontSize="50" Margin="2,0,2,0"/>
+            <TextBlock x:Name="Tuotemaara" Grid.Column="1" Text="2 kpl" HorizontalAlignment="Center" FontSize="50" Margin="2,0,2,0"/>
+            <TextBlock x:Name="Yhteishinta" Grid.Column="2" Text="3 €" HorizontalAlignment="Right" FontSize="50" Margin="2,0,2,0"/>
         </Grid>
-        <Grid Grid.Row="2" BorderThickness="5" BorderBrush="Black" Background="Azure">
+        <Grid Grid.Row="2" Grid.Column="1" BorderThickness="5" BorderBrush="Black" Background="Azure">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="170*"/>
                 <ColumnDefinition Width="100*"/>
@@ -54,7 +50,7 @@
                 <TextBlock x:Name="EuroaBlock" TextWrapping="Wrap" Text="€" HorizontalAlignment="Right" VerticalAlignment="Stretch" FontFamily="MV Boli"/>
             </Viewbox>
         </Grid>
-        <Grid Grid.Row="3" BorderThickness="5" BorderBrush="Black" >
+        <Grid Grid.Row="3" Grid.Column="1" BorderThickness="5" BorderBrush="Black" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="170*"/>
                 <ColumnDefinition Width="100*"/>
@@ -70,7 +66,7 @@
                 <TextBlock x:Name="Euroa3Block" TextWrapping="Wrap" Text="€" HorizontalAlignment="Right" VerticalAlignment="Stretch" FontFamily="MV Boli"/>
             </Viewbox>
         </Grid>
-        <Grid Grid.Row="4" BorderThickness="5" BorderBrush="Black" Background="Azure">
+        <Grid Grid.Row="4" Grid.Column="1" BorderThickness="5" BorderBrush="Black" Background="Azure">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="170*"/>
                 <ColumnDefinition Width="100*"/>
