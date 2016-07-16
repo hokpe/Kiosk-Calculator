@@ -34,7 +34,7 @@
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="listArtikkelit" Grid.Column="1" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" ItemsSource="{Binding ItemsCollection}">
+            <ListBox x:Name="listArtikkelit" Grid.Column="1" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" ItemsSource="{Binding ItemsCollection}" DoubleTapped="koe">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>

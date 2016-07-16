@@ -62,6 +62,7 @@ namespace KioskiLaskin
                     yht_hinta += (ma.maara * ma.hinta);
                     SumBlock.Text = yht_hinta.ToString();
                 }
+                EuroaBlock.Text = Settings.getCurrency();
             }
             else
             {

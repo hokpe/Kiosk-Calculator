@@ -53,8 +53,7 @@ namespace KioskiLaskin
                     {
                         tapahtuma = new Tapahtuma();
                         DateTime localDate = DateTime.Today;
-                        tapahtuma.Paivamaara = localDate.ToString();
-                        tapahtuma.Paivamaara = tapahtuma.Paivamaara.Substring(0, tapahtuma.Paivamaara.Length - 9); // - " 00:00:00"
+                        tapahtuma.Paivamaara = localDate.Date.Day.ToString() + "-" + localDate.Date.Month.ToString() + "-" + localDate.Date.Year.ToString();
                         {
                             tapahtuma.MaaritaHinnasto((Hinnasto)e.Parameter);
                             NimiTapahtumalle();
@@ -100,23 +99,12 @@ namespace KioskiLaskin
             TapahtumaSelitys.Visibility = Visibility.Visible;
             TapahtumaQuery.Visibility = Visibility.Visible;
             TapahtumaQuery.Opacity = 1;
-            /*{
-                DoubleAnimation da = new DoubleAnimation();
-                da.From = 1;
-                da.To = 0;
-                da.Duration = new Duration(TimeSpan.FromSeconds(2));
-                da.AutoReverse = true;
-                /da.RepeatBehavior = RepeatBehavior.Forever;
-                da.RepeatBehavior=new RepeatBehavior(3);
-                CancelButton.BeginAnimation(OpacityProperty, da);
-            }*/
             PageEnabled(false);
         }
 
         private void PageEnabled(bool enable)
         {
             Visibility v = (enable ? Visibility.Visible : Visibility.Collapsed);
-            //SolidColorBrush c = new SolidColorBrush((enable ? Colors.Black : Colors.Gray));
             double o = (enable ? 1 : 0.3);
             LisaaTuotetta.Opacity = o;
             VähennäTuotetta.Opacity = o;
@@ -132,9 +120,18 @@ namespace KioskiLaskin
             yhteensaBorder.Opacity = o;
             if (listArtikkelit.Visibility == Visibility.Visible)
             {
+                if(tapahtuma.myyntitapahtuma.ostoslista.myyntiArtikkelit.Count > 0)
+                {
+                    foreach(MyyntiArtikkeli ma in tapahtuma.myyntitapahtuma.ostoslista.myyntiArtikkelit)
+                    {
+                        if(ma.currency != Settings.getCurrency())
+                        {
+                            ma.currency = Settings.getCurrency();
+                        }
+                    }
+                }
                 listArtikkelit.ItemsSource = tapahtuma.myyntitapahtuma.ostoslista.myyntiArtikkelit;
                 TapahtumaNimi.Text = Localization.GetLocalizedTextWithVariables("EventX", tapahtuma.nimi);
-                //TapahtumaNimi.Text = "Tapahtuma:\n" + tapahtuma.nimi;
             }
         }
 
@@ -148,7 +145,6 @@ namespace KioskiLaskin
             if(maara > 0)
             {
                 this.Frame.Navigate(typeof(Laskin2), tapahtuma);
-                //BackStackClass.Navigate(this.Frame, typeof(Laskin2), typeof(Laskin2), tapahtuma);
             }
         }
 
@@ -156,7 +152,6 @@ namespace KioskiLaskin
         {
             MyyntiArtikkeli ma = (MyyntiArtikkeli)listArtikkelit.SelectedItem;
             
-            // Laskin l2;
             if (ma != null)
             {
                 ma.maara++;
@@ -223,6 +218,11 @@ namespace KioskiLaskin
             EditBoxHeader.Visibility = Visibility.Collapsed;
             TapahtumaSelitys.Visibility = Visibility.Collapsed;
             TapahtumaQuery.Visibility = Visibility.Collapsed;
+        }
+
+        private void koe(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            LisaaTuotettaClick(null, null);
         }
     }
 }

@@ -79,7 +79,7 @@ namespace KioskiLaskin
         }
         public static string getCurrency()
         {
-            if (appSettings == null)
+            if (appSettings != null)
             {
                 return Currencies[appSettings.SelectedCurrency];
             }

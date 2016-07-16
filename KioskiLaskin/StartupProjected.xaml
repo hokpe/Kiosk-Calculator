@@ -18,7 +18,7 @@
         <Viewbox Grid.Row="0" Grid.Column="0">
             <TextBlock x:Name="textBlock" x:Uid="ApplicationNameHeader" TextWrapping="Wrap" Text="Laskin" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FFD43535" FontFamily="MV Boli" />
         </Viewbox>
-        <Image x:Name="mediaElement" HorizontalAlignment="Stretch"  Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Stretch" Source="Assets/StartPicture.png"/>
+        <Image x:Name="mediaElement" HorizontalAlignment="Stretch"  Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Stretch" Source="Assets/StartPicture.jpg"/>
         <Viewbox Grid.Row="2" Grid.Column="0">
             <TextBlock x:Name="CopyrightBlock" TextWrapping="Wrap" Text="hokpesoftware@outlook.com" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="MV Boli" Foreground="#FFFBF7F7" />
         </Viewbox>

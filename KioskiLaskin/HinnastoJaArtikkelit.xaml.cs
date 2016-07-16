@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -144,7 +145,6 @@ namespace KioskiLaskin
 
             var dialog = new MessageDialog(Localization.GetLocalizedTextWithVariables("DeleteXQuestionMsg", s), Localization.GetLocalizedText("ConfirmationMsgHeader"));
 
-            //var dialog = new MessageDialog("Haluatko poistaa " + s + "?");
             var yesCommand = new UICommand(Localization.GetLocalizedText("Yes"), null, 0);
             var noCommand = new UICommand(Localization.GetLocalizedText("No"), null, 1);
 
@@ -160,17 +160,28 @@ namespace KioskiLaskin
             {
                 Hinnastot.Remove(h);
                 listHinnasto.ItemsSource = null;
-                listHinnasto.ItemsSource = Hinnastot;
-                listHinnasto.SelectedItem = Hinnastot.First();
-                h = (Hinnasto)listHinnasto.SelectedItem;
-                listArtikkelit.ItemsSource = null;
-                if(h == null)
-                    LuoEnsimmainenHinnasto();
+                if (Hinnastot.Count > 0)
+                {
+                    listHinnasto.ItemsSource = Hinnastot;
+                    listHinnasto.SelectedItem = Hinnastot.First();
+                    h = (Hinnasto)listHinnasto.SelectedItem;
+                    listArtikkelit.ItemsSource = null;
+                }
                 else
-                    listArtikkelit.ItemsSource = h.Artikkelit;
+                {
+                    h = null;
+                }
                 string ss = Localization.GetLocalizedTextWithVariables("XHasDeletedMsg", s);
                 var dialog2 = new MessageDialog(ss);
                 await dialog2.ShowAsync();
+                if (h == null)
+                {
+                    LuoEnsimmainenHinnasto();
+                }
+                else
+                {
+                    listArtikkelit.ItemsSource = h.Artikkelit;
+                }
             }
         }
 
@@ -213,7 +224,6 @@ namespace KioskiLaskin
             string s = a.ToString();
 
             var dialog = new MessageDialog(Localization.GetLocalizedTextWithVariables("DeleteXQuestionMsg",s), Localization.GetLocalizedText("ConfirmationMsgHeader"));
-            //var dialog = new MessageDialog("Haluatko poistaa " + s + "?", "Kysymys");
             var yesCommand = new UICommand("Yes", null, 0);
             var noCommand = new UICommand("No", null, 1);
 
@@ -263,7 +273,7 @@ namespace KioskiLaskin
         {
             Hinnasto h;
             h = (Hinnasto)listHinnasto.SelectedItem;
-            if (h == null)
+            if (h == null && Hinnastot.Count > 0)
             {
                 listHinnasto.SelectedItem = Hinnastot.First();
                 h = (Hinnasto)listHinnasto.SelectedItem;
@@ -372,7 +382,14 @@ namespace KioskiLaskin
                         }
                         if (changed)
                         {
-                            a.nimi = EditBox2.Text;
+                            if (EditBox2.Text != "")
+                            {
+                                a.nimi = EditBox2.Text;
+                            }
+                            else
+                            {
+                                a.nimi = Localization.GetLocalizedText("DefaultArticleName");
+                            }
                             TallennaHinnastot();
                         }
                     }
@@ -408,7 +425,7 @@ namespace KioskiLaskin
             }
         }
         private void HinnastoOnKeyDownHandler(object sender, KeyRoutedEventArgs e)
-        {
+        {            
             EditorChanged = true;
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
@@ -417,6 +434,10 @@ namespace KioskiLaskin
         }
         private void ArtikkeliOnKeyDownHandler(object sender, KeyRoutedEventArgs e)
         {
+            if(EditBox2.Text == Localization.GetLocalizedText("DefaultArticleName") && !EditorChanged)
+            {
+                EditBox2.Text = "";
+            }
             EditorChanged = true;
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
@@ -433,7 +454,7 @@ namespace KioskiLaskin
                 float n;
                 bool isNumeric = float.TryParse(s, out n);
 
-                if (isNumeric)
+                if (isNumeric || s == "")
                 {
                     ArtikkeliTextBoxOkString = s;
                 }
@@ -512,7 +533,6 @@ namespace KioskiLaskin
             EditBox2.Text = a.nimi;
             ArtikkeliId = a.uid;
             EditBox2Header.Text = Localization.GetLocalizedText("articleNameEditHeader");
-            //EditBox2Header.Text = "Artikkelin nimi";
             EditBox2.Visibility = Visibility.Visible;
             EditBox2Header.Visibility = Visibility.Visible;
             ArtikkeliQuery.Visibility = Visibility.Visible;
@@ -541,8 +561,7 @@ namespace KioskiLaskin
         {
             Hinnasto h;
             h = (Hinnasto)listHinnasto.SelectedItem;
-
-            //BackStackClass.Navigate(this.Frame, typeof(Laskin), typeof(Laskin_Projected), h);
+            
             this.Frame.Navigate(typeof(Laskin), h);
         }
 
@@ -562,20 +581,5 @@ namespace KioskiLaskin
                 }
             } while (i > 10);
         }
-
-        /*
-   Artikkeli a;
-   a = (Artikkeli)listArtikkelit.SelectedItem;
-   if(!ArtikkeliListSelectionChanged)
-   {
-       if(a == null)
-       {
-           listArtikkelit.SelectedItem = ((Hinnasto)(listHinnasto.SelectedItem)).Artikkelit.First();
-           a = (Artikkeli)listArtikkelit.SelectedItem;
-       }
-       EditArtikkeliNimi(a);
-   }
-   ArtikkeliListSelectionChanged = false;
-}*/
     }
 }
